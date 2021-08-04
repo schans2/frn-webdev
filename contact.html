@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function() {
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        $("#carousel").load("carousel.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+      <!-- Contact page -->
+      <div class="container-fluid boxes">
+        <div class="row justify-content-center">
+          <div class="contact-us-section container">
+            <form action="action_page.php">
+              <p>Leave a message</p>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name.."
+              />
+
+<!--               <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select> -->
+
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Ask a question or provide feedback..."
+                style="height:200px"
+              ></textarea>
+
+              <input class="float-right" type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+        <div id="footer"></div>
+      </div>
+    </main>
+  </body>
+</html>
